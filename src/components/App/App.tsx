@@ -1,9 +1,8 @@
 import { useState } from "react";
-// import css from "./App.module.css";
 import SearchBar from "../SearchBar/SearchBar";
 import MovieGrid from "../MovieGrid/MovieGrid";
 import MovieModal from "../MovieModal/MovieModal";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import ErrorMessage from "../Loader/Loader";
 import { movieService } from "../../services/movieService";
 import Loader from "../Loader/Loader";
 import toast, { Toaster } from "react-hot-toast";
