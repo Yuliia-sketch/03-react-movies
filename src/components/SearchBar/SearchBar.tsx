@@ -7,14 +7,14 @@ interface SeachBArProps {
 
 export default function SearchBar({ onSubmit }: SeachBArProps) {
   const handleSubmit = (formData: FormData) => {
-    const query = formData.get("query") as string;
-  };
-if (!query.trim()) {
+    const query = (formData.get("query") as string).trim();
+
+if (!query) {
       toast.error("Please enter your search query.");
       return;
     }
 
-    onSearch(query);
+    onSubmit(query);
   };
   
   return (
@@ -44,3 +44,5 @@ if (!query.trim()) {
       </div>
     </header>
   );
+}
+  
